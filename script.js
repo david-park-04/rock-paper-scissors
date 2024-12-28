@@ -27,3 +27,19 @@ function getComputerChoice() {
     }
 }
 
+//
+// getHumanChoice
+// 
+// Retrieves the user's choice and returns it.
+// 
+// Parameters: None
+// Returns: User's choice (String)
+//
+function getHumanChoice() {
+    let choice = prompt("Type (r) for Rock, (p) for Paper, or (s) for Scissors.");
+    let possibleChoices = ["Rock", "Paper", "Scissors"];
+
+    if (possibleChoices.includes(choice)) {
+        return choice;
+    }
+}
