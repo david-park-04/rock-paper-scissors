@@ -38,18 +38,15 @@ function getComputerChoice() {
 //
 function getHumanChoice() {
     let choice = prompt("Type (r) for Rock, (p) for Paper, or (s) for Scissors.");
-    let possibleChoices = ["Rock", "Paper", "Scissors"];
 
-    if (possibleChoices.includes(choice)) {
-        if (choice === "r") {
-            return "Rock";
-        }
-        else if (choice === "p") {
-            return "Paper";
-        }
-        else {
-            return "Scissors";
-        }
+    if (choice === "r") {
+        return "Rock";
+    }
+    else if (choice === "p") {
+        return "Paper";
+    }
+    else {
+        return "Scissors";
     }
 }
 
