@@ -130,4 +130,4 @@ function playGame() {
     console.log(`Player score: ${humanScore}, Computer score: ${computerScore}`);
 }
 
-playGame();
+// playGame();
