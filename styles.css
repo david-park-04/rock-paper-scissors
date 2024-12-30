@@ -1,1 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 
+html {
+    background-color: rgb(252, 230, 186);
+
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.rps-title {
+    padding: 16px;
+    text-align: center;
+}
+
+.divider {
+    border: 3px dashed rgb(64, 67, 65)
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 16px;
+    text-align: center;
+}
+
+main h2 {
+    margin-top: 16px;
+}
+
+main p {
+    font-size: 22px;
+}
+
+.choices {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+}
+
+.choices button {
+    font-size: 16px;
+    height: 200px;
+    width: 200px;
+    border: none;
+    border-radius: 12px;
+
+    background-color: rgb(165, 160, 149);
+}
+
+button img {
+    max-height: 80%;
+    max-width: 80%;
+}
