@@ -29,28 +29,6 @@ function getComputerChoice() {
 }
 
 //
-// getHumanChoice
-// 
-// Retrieves the user's choice and returns it.
-// 
-// Parameters: None
-// Returns: User's choice (String)
-//
-function getHumanChoice() {
-    let choice = prompt("Type (r) for Rock, (p) for Paper, or (s) for Scissors.");
-
-    if (choice === "r") {
-        return "Rock";
-    }
-    else if (choice === "p") {
-        return "Paper";
-    }
-    else {
-        return "Scissors";
-    }
-}
-
-//
 // playGame
 // 
 // Handles game logic. Plays 5 rounds before ending.
@@ -118,16 +96,25 @@ function playGame() {
         }
     }
 
-    // Play for 5 rounds
-    for (let i = 0; i < 5; i++) {
-        const humanSelection = getHumanChoice();
-        const computerSelection = getComputerChoice();
+    const choice = document.querySelector(".choices");
+    choice.addEventListener("click", (event) => {
+        let target = event.target;
 
-        playRound(humanSelection, computerSelection);
-    }
+        switch(target.id) {
+            case "rock":
+                playRound("Rock", getComputerChoice());
+                break;
+            case "paper":
+                playRound("Paper", getComputerChoice());
+                break;
+            case "scissors":
+                playRound("Scissors", getComputerChoice());
+                break;
+        }
+    });
 
     console.log("Game over!");
     console.log(`Player score: ${humanScore}, Computer score: ${computerScore}`);
 }
 
-// playGame();
+playGame();
