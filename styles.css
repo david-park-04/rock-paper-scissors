@@ -40,6 +40,10 @@ main p {
     gap: 32px;
 }
 
+.score {
+    font-size: 22px;
+}
+
 .choices button {
     font-size: 16px;
     height: 200px;
@@ -48,9 +52,15 @@ main p {
     border-radius: 12px;
 
     background-color: rgb(165, 160, 149);
+    cursor: pointer;
 }
 
-button img {
+.choices button:hover {
+    background-color: rgb(207, 201, 189)
+}
+
+.choices button img {
     max-height: 80%;
     max-width: 80%;
+    pointer-events: none;
 }
